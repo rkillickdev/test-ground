@@ -9,68 +9,41 @@ body {
     background-color: #F0F2EF ;
 }
 
-/* grid layout */
-
-#container {
-  height: 100vh;
-  width: 100%;
-  background-color: green;
-  
-
-  /* Grid container settings */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    'header'
-    'main'
-    'footer';
+h1 {
+  color: #02401A;
 }
 
-#container > header {
-  grid-area: header;
+/* Main element css grid layout */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: green;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto min-content;
+
 }
 
-#container > main {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 600px 1fr;
+/* .main-container-full {
+  grid-area: 1 / 1 / 1 / 4;  
 }
 
-#container > section.full {
-  grid-area: 1 / 1 / 1 / 4;
-}
-
-#container > section.left {
+.main-container-left {
   grid-area: 1 / 1 / 1 / 2;
 }
 
-#container > footer {
-  grid-area: footer;
+.main-container-center {
+  grid-area: 1 / 1 / 2 / 3;
 }
 
-/* Intro section */
-
-#intro {
-  height: 600px;
-  background-color: aqua;
-}
-  
-
-/* .item {
-  background-color: #80cbc4;
-  border: 1px solid #fff;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  height: 300px;
-}
-
-.flex-container {
-  display:flex;
-  justify-content: space-around;
-
+.main-container-right {
+  grid-area: 1 / 1 / 3 / 4;
 } */
+
+
+
 
 /* nav bar */
 
@@ -110,37 +83,223 @@ nav {
     display: inline-block;
   }
 
-/* hero image */
+  /* hero image */
 
-#hero-outer {
-    height: 600px;
-    width:100%;
-    position: relative;
-}
+  #hero-outer {
+      height: 600px;
+      width:100%;
+      position: relative;
+  }
 
-#hero-outer.full {
-  grid-area: 1 / 1 / 1 / 4;
-}
-
-#intro.left {
-  grid-area: 1 / 1 / 1 / 2
-}
-
-#hero-image {
+  #hero-image {
     height: 600px;
     width: 100%;
     background: url('../images/hero-image-leaf-water.jpg') no-repeat center center;
 }
 
-h1 {
-    color: #02401A;
+#quote {
+  color: #F0F2EF;
+  width: 300px;
+  height: 200px;
+  bottom: 30px;
+  right: 150px;
+  position: absolute; 
 }
 
-#quote {
-    color: #F0F2EF;
-    width: 300px;
-    height: 200px;
-    bottom: 30px;
-    right: 150px;
-    position: absolute; 
-}
+  /* #hero-outer.full {
+    grid-area: 1 / 1 / 1 / 4;
+  } */
+
+  /* About section */
+
+  #about {
+    height: 600px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #welcome {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 280%;
+  }
+
+  #vision {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    background-color: antiquewhite;
+  }
+
+  #vision-image {
+    width: 66%;
+    height: 300px;
+    background-color: aqua;
+  }
+
+  #vision-info {
+    width: 66%;
+    height: 300px;
+    background-color: grey;
+  }
+
+
+
+  
+
+  #left-goals {
+    width: 33%;
+    flex-direction: row;
+  }
+
+
+
+/* existing css commented out to test new CSS grid method */
+
+/* grid layout */
+
+  /* #container {
+    height: 100vh;
+    width: 100%;
+    background-color: green; */
+    
+
+    /* Grid container settings */
+    /*
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+      'header'
+      'main'
+      'footer';
+  }
+
+  #container > header {
+    grid-area: header;
+  }
+
+  #container > main {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto;
+  }
+
+  #container > section.full {
+    grid-area: 1 / 1 / 1 / 4;
+  }
+
+  #container > section.left {
+    grid-area: 1 / 1 / 1 / 2;
+  }
+
+  #container > footer {
+    grid-area: footer;
+  } */
+
+  /* Intro section */
+
+  /* #intro {
+    height: 600px;
+    background-color: aqua;
+  }
+     */
+
+  /* .item {
+    background-color: #80cbc4;
+    border: 1px solid #fff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    height: 300px;
+  }
+
+  .flex-container {
+    display:flex;
+    justify-content: space-around;
+
+  } */
+
+  /* nav bar */
+
+  /* nav {
+      width: 100%;
+      background-color: #F0F2EF;
+      padding-left: 30px;
+      padding-right: 10px;
+  }
+
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav-item a {
+      display: inline-block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #02401A;
+    }
+    
+    .nav-item:hover {
+      background-color: #02401A;
+    }
+    
+    .nav-item:hover a {
+      color: #F0F2EF;
+    }
+
+    #logo {
+      display: inline-block;
+    } */
+
+  /* hero image */
+
+  /* #hero-outer {
+      height: 600px;
+      width:100%;
+      position: relative;
+  }
+
+  #hero-outer.full {
+    grid-area: 1 / 1 / 1 / 4;
+  }
+
+  #intro.left {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+
+  .welcome {
+    width: 60%;
+    height: 900px;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #hero-image {
+      height: 600px;
+      width: 100%;
+      background: url('../images/hero-image-leaf-water.jpg') no-repeat center center;
+  }
+
+  h1 {
+      color: #02401A;
+  }
+
+  #quote {
+      color: #F0F2EF;
+      width: 300px;
+      height: 200px;
+      bottom: 30px;
+      right: 150px;
+      position: absolute; 
+  } */
