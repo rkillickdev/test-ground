@@ -135,26 +135,43 @@ nav {
   }
 
   #vision-image {
-    width: 66%;
-    height: 300px;
+    padding: 20px;
+    width: 33.33%;
     background-color: aqua;
   }
 
   #vision-info {
-    width: 66%;
-    height: 300px;
+    padding: 20px;
+    width: 66.66%;
     background-color: grey;
   }
 
-
-
-  
-
-  #left-goals {
-    width: 33%;
+  #goals {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
   }
 
+  #left-goals {
+    width: 33.33%;
+  }
+
+  #left-goals h2 {
+    text-align: center;
+  }
+
+  #center-goals {
+    width: 33.33%;
+    text-align: center;
+  }
+
+#right-goals {
+  width: 33.33%;
+  text-align: center;
+}
 
 
 /* existing css commented out to test new CSS grid method */
